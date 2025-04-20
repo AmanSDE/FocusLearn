@@ -1,106 +1,135 @@
-# FocusLearn
-🔥 FocusLearn – Master Learning with Structured Focus
-FocusLearn is an intelligent, modular productivity platform designed to help learners and knowledge seekers stay organized, focused, and consistent while reading books (PDFs) or watching online tutorials (YouTube).
+# FocusLearn 📚🎥🔊
+**Your All-in-One Learning Productivity Platform**  
+*"Read, Watch, Reflect, and Grow – All in One Space."*
 
-Imagine Notion meets YouTube meets Kindle — now supercharged with progress tracking, timeline notes, productivity analytics, and white-noise immersion, all in one unified platform.
+<div align="center">
+  <img src="https://github.com/AmanSDE/FocusLearn/blob/main/assets/hero-animation.gif?raw=true" alt="FocusLearn Demo" width="800">
+  
+  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
+  [![GitHub Stars](https://img.shields.io/github/stars/AmanSDE/FocusLearn?style=social)](https://github.com/AmanSDE/FocusLearn/stargazers)
+</div>
 
-📌 Why FocusLearn?
-In today’s fast-paced learning culture, resources are scattered:
-📘 PDFs stored in folders,
-📺 YouTube links saved in bookmarks,
-📝 Notes in some other app,
-⏱️ Progress manually tracked (or not at all),
-🎧 Focus music played separately.
+## 🌟 Why FocusLearn?
 
-This fragmentation breaks your momentum.
+<div align="center">
+  <img src="https://github.com/AmanSDE/FocusLearn/blob/main/assets/problem-solution.png?raw=true" alt="Problem vs Solution" width="600">
+</div>
 
-FocusLearn fixes this. It brings everything under one roof.
+Modern learners juggle between multiple tools:
+- 📚 PDF readers
+- 🎬 Video players
+- 📝 Note-taking apps
+- ⏱️ Time trackers
+- 🎧 Focus tools
 
-🌟 Key Highlights
+**FocusLearn consolidates everything into one powerful platform:**
+    title Learning Tool Consolidation
+    "FocusLearn" : 85
+    "Other Tools" : 15
+🚀 Key Features
+📚 Unified Learning Hub
+PDF Reader with pagination and bookmarks
 
-Feature	Description
-📚 Upload & Read PDFs	Upload books and read them with full-panel view and auto-save progress
-📺 Watch YouTube Tutorials	Paste any YouTube URL and track viewing time, take timestamped notes
-📝 Timeline Notes	Add thoughts, reminders, or ideas at specific page or video time index
-⏱️ Progress Logs	Monitor and reflect on time spent per resource
-🔊 Focus Sounds	In-app white noise (rain, cafe, ambient) to boost concentration
-🔐 JWT Authentication	Secure login/signup module with token-based access
-🧠 Clean Architecture	Modular, scalable, production-ready project design
-🧱 Built With Passion & Precision
-Frontend: Angular 16+ with PrimeNG
+YouTube Integration with progress tracking
 
-Backend: .NET 7 Web API with MongoDB
+Seamless Switching between media types
 
-Authentication: JWT-based auth with token interceptors
+✍️ Smart Annotation System
+![sequenceDiagram_20250420_83418c](https://github.com/user-attachments/assets/35209abd-ab4d-4da5-9cd6-ce56d91dae6c)
 
-Storage: Local FileSystem (PDFs) – Cloud support ready (S3, etc.)
+📊 Progress Analytics
+Metric	Description
+⏱️ Time Spent	Track learning sessions
+📈 Completion	Visualize progress
+🎯 Goals	Set and achieve targets
+🔇 Focus Environment
 
-Design Patterns: Repository Pattern, Clean Architecture, Dependency Injection
+White noise generator (6 presets)
 
-Optional Middleware: Node.js/Express or .NET Minimal API Gateway
+Full-screen distraction-free mode
 
-🧩 Software Architecture Principles
-✅ Repository Pattern for clean data access
+Pomodoro timer with breaks
 
-✅ Separation of Concerns for maintainable code
+🛠️ Technology Stack
+Layer	 Technologies  	Purpose
+Frontend	Angular 16, PrimeNG, RxJS	Responsive UI
+Backend	.NET 7, MongoDB	API & Data
+DevOps	Docker, GitHub Actions	CI/CD Pipeline
 
-✅ Domain-Driven Design for long-term scaling
 
-✅ Feature-based Angular structure for frontend maintainability
+sequenceDiagram
+    User->>FocusLearn: Adds note at timestamp
+    FocusLearn->>Database: Stores note with metadata
+    Database-->>FocusLearn: Confirms storage
+    FocusLearn-->>User: Displays saved note
 
-✅ Full CORS & Proxy Config for seamless local development
+🏗️ Architecture Overview
+![Architecture](https://github.com/user-attachments/assets/d907344b-d43f-4576-b88e-7bbbfc0cdeef)
 
-📊 Who Is This For?
-This product is ideal for:
+📦 Installation Guide
+Prerequisites
+# Required Tools
+npm install -g @angular/cli
+dotnet tool install -g dotnet-ef
+docker --version
 
-🎓 Students pursuing self-study or crash courses
+# 1. Clone repository
+git clone https://github.com/AmanSDE/FocusLearn.git
+# Quick Start
+# 2. Run with Docker
+cd FocusLearn
+docker-compose up --build
+#Configuration
+.env.example
+MONGODB_URI=mongodb://mongo:27017/focuslearn
+JWT_SECRET=your_secure_key
 
-📚 Readers managing personal knowledge libraries
+🧩 Project Structure
+FocusLearn/
+├── client-app/          # Angular Frontend
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── core/       # Services
+│   │   │   ├── modules/    # Feature modules
+│   │   │   └── shared/     # Components
+├── server-api/         # .NET Backend
+│   ├── Application/    # Business logic
+│   ├── Domain/         # Models
+│   └── Infrastructure/ # Data access
+├── docs/              # Architecture diagrams
+└── tests/             # Unit & integration tests
 
-🧑‍💻 Developers watching YouTube tutorials or reading docs
+🤝 Contributing
+<div align="center"> <img src="https://github.com/AmanSDE/FocusLearn/blob/main/assets/contributing-flow.png?raw=true" alt="Contributing Flow" width="600"> </div>
+Fork the repository
 
-🧘‍♀️ Anyone trying to reduce digital distraction and focus more
+Create your feature branch (git checkout -b feat/amazing-feature)
 
-🚀 Project Goals
-Empower learners with focus-driven tools
+Commit your changes (git commit -m 'Add some amazing feature')
 
-Unify reading and video-learning under one platform
+Push to the branch (git push origin feat/amazing-feature)
 
-Eliminate distractions through immersive view and ambient focus sounds
+Open a Pull Request
 
-Track progress, time, and notes to build a second brain
+Coding Standards:
 
-🧠 Enhancement Ideas (Roadmap)
-🤖 AI-Note Summarizer: Summarize timeline notes or generate questions using AI
+Follow Angular Style Guide
 
-👯‍♂️ Collaboration Mode: Share timeline with teammates, annotate together
+Use Clean Architecture principles
 
-📊 Analytics Dashboard: Visualize learning time, focus habits, and reading trends
+Maintain 80%+ test coverage
 
-☁️ Cloud Storage Integration: Upload and sync PDFs to Google Drive / Dropbox
+Document new features
 
-🔄 Auto YouTube Importer: Import playlists as learning tracks
+📜 License
+Distributed under the MIT License. See LICENSE for more information.
 
-👨‍💻 Developer Experience
-✅ Modular Frontend & Backend — run separately or together
-✅ API-first approach for integration flexibility
-✅ Production-ready code structure (Angular feature modules, .NET clean layers)
-✅ Docker support (coming soon)
-✅ CI/CD ready structure (GitHub Actions, environment configs)
+📬 Contact
+Aman Shahi - @AmanSDE - am.amanshahi@example.com
 
-🌍 Join the Mission
-This project isn’t just a codebase.
-It’s a philosophy: "Structured learning is better learning."
-It’s built for learners, by learners — and we welcome ideas, contributors, and feedback.
+Project Link: https://github.com/AmanSDE/FocusLearn
 
-⭐ Star the repo if you believe in focused self-education.
-🤝 Contribute to improve it — from small PRs to big features.
-📬 Raise an issue or suggestion to help shape the roadmap.
+<div align="center"> <h3>🌟 Star us on GitHub if you find this project useful! 🌟</h3> <p>Help us build the future of focused learning</p> </div> 
 
-📄 License
-This project is licensed under the MIT License — open for all to use, extend, and improve.
 
-🧠 Get Started Now
-Check out the README for full setup instructions, API documentation, diagrams, and structure explanation.
-
-“Learning is not the product of teaching. Learning is the product of the activity of learners.” — John Holt
