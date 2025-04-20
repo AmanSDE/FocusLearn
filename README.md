@@ -1,266 +1,187 @@
-markdown
-# FocusLearn 📚🎥🔊
-**Your All-in-One Learning Productivity Platform**  
-*"Read, Watch, Reflect, and Grow – All in One Space."*
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{minted}
+\usepackage{fontawesome5}
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Angular](https://img.shields.io/badge/Angular-16+-DD0031.svg?logo=angular)](https://angular.io/)
-[![.NET](https://img.shields.io/badge/.NET-7-512BD4.svg?logo=dotnet)](https://dotnet.microsoft.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-47A248.svg?logo=mongodb)](https://www.mongodb.com/)
+% Colors
+\definecolor{primary}{RGB}{41,128,185}
+\definecolor{secondary}{RGB}{142,68,173}
+\definecolor{accent}{RGB}{39,174,96}
 
-![FocusLearn Hero Banner](https://via.placeholder.com/1200x400/2d3748/ffffff?text=FocusLearn+-+Unified+Learning+Platform) <!-- Replace with actual screenshot -->
+\title{\color{primary}\textbf{FocusLearn}\\ 
+\large{\color{secondary}Your All-in-One Learning Productivity Platform}
+\author{Aman Shahi \\ \small{\texttt{am.amanshahi@example.com}}}
+\date{\today}
 
-## Table of Contents
-- [🌟 Why FocusLearn?](#-why-focuslearn)
-- [🚀 Key Features](#-key-features)
-- [🛠️ Technology Stack](#%EF%B8%8F-technology-stack)
-- [📦 Installation Guide](#-installation-guide)
-- [🔧 Development Setup](#-development-setup)
-- [🏗️ Project Structure](#%EF%B8%8F-project-structure)
-- [📈 Roadmap](#-roadmap)
-- [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
-- [📬 Contact](#-contact)
+\begin{document}
 
-## 🌟 Why FocusLearn?
+\maketitle
 
-Modern learners face **fragmentation**:
-- 📚 PDFs scattered across devices
-- 📺 Tutorial playlists lost in browser history
-- 📝 Notes trapped in different apps
-- ⏱️ No progress tracking
-- 🎧 Focus tools running separately
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{placeholder-hero.png} % Replace with actual image
+    \vspace{1em}
+    
+    \textit{"Read, Watch, Reflect, and Grow – All in One Space."}
+\end{center}
 
-FocusLearn **solves this** by providing:
-```diff
-+ Single platform for all learning resources
-+ Unified note-taking with timeline sync
-+ Automatic progress tracking
-+ Built-in focus environment
-+ Secure cloud-synced library
-🚀 Key Features
-📚 Unified Learning Hub
-PDF Reader Demo
+\section*{\color{primary}\faIcon{star} Why FocusLearn?}
+Modern learners face \textbf{fragmentation}:
+\begin{itemize}
+    \item \faIcon{book} PDFs scattered across devices
+    \item \faIcon{youtube} Tutorial playlists lost in browser history
+    \item \faIcon{sticky-note} Notes trapped in different apps
+    \item \faIcon{clock} No progress tracking
+    \item \faIcon{headphones} Focus tools running separately
+\end{itemize}
 
-Upload and read PDFs with pagination
+FocusLearn provides:
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{\textwidth}{lX}
+        \toprule
+        \textbf{Solution} & \textbf{Benefit} \\
+        \midrule
+        Unified Platform & Single workspace for all learning resources \\
+        Timeline Notes & Contextual annotations synchronized with content \\
+        Progress Analytics & Visual tracking of learning journey \\
+        Focus Environment & Built-in productivity tools \\
+        Secure Cloud Sync & Access your library anywhere \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
-Save YouTube tutorials as learning tracks
+\section*{\color{primary}\faIcon{rocket} Key Features}
+\subsection*{\faIcon{book-open} Unified Learning Hub}
+\begin{minipage}{0.6\textwidth}
+    \begin{itemize}
+        \item PDF reader with pagination
+        \item YouTube tutorial integration
+        \item Seamless media switching
+    \end{itemize}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+    \includegraphics[width=\linewidth]{placeholder-pdf.png}
+\end{minipage}
 
-Switch between media types seamlessly
+\subsection*{\faIcon{pencil-alt} Smart Annotation}
+\begin{itemize}
+    \item Time/page-specific notes
+    \item Tagging and search
+    \item Markdown formatting support
+\end{itemize}
 
-✍️ Smart Annotation
-Timeline Notes Demo
+\section*{\color{primary}\faIcon{cogs} Technology Stack}
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{\textwidth}{lXl}
+        \toprule
+        \textbf{Layer} & \textbf{Technologies} & \textbf{Purpose} \\
+        \midrule
+        Frontend & Angular 16+, PrimeNG, RxJS & Responsive UI \\
+        Backend & .NET 7, MongoDB & Business logic \& data \\
+        DevOps & Docker, GitHub Actions & CI/CD pipeline \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
-Add notes at specific timestamps/pages
+\section*{\color{primary}\faIcon{download} Installation}
+\subsection*{Prerequisites}
+\begin{lstlisting}[language=bash]
+# Required tools
+sudo apt install -y nodejs dotnet-sdk-7.0 mongodb-org
+npm install -g @angular/cli
+\end{lstlisting}
 
-Tag notes by category/concept
+\subsection*{Setup Steps}
+\begin{enumerate}
+    \item Clone repository:
+    \begin{minted}{bash}
+    git clone https://github.com/AmanSDE/FocusLearn.git
+    cd FocusLearn
+    \end{minted}
+    
+    \item Configure backend:
+    \begin{minted}{bash}
+    cd server-api
+    echo "MONGODB_URI=mongodb://localhost:27017/focuslearn" > .env
+    dotnet restore
+    dotnet run
+    \end{minted}
+    
+    \item Run frontend:
+    \begin{minted}{bash}
+    cd ../client-app
+    npm install
+    ng serve
+    \end{minted}
+\end{enumerate}
 
-Search across all annotations
-
-📊 Progress Analytics
-Dashboard Demo
-
-Time spent per resource
-
-Completion percentage
-
-Daily/weekly learning trends
-
-🔇 Focus Environment
-Focus Mode Demo
-
-Built-in white noise generator
-
-Full-screen distraction-free mode
-
-Pomodoro timer integration
-
-🛠️ Technology Stack
-Frontend
-Technology	Purpose
-Angular 16+	Core framework
-PrimeNG	UI components
-ngx-extended-pdf-viewer	PDF rendering
-RxJS	State management
-Chart.js	Data visualization
-Backend
-Technology	Purpose
-.NET 7	API framework
-MongoDB	NoSQL database
-JWT	Authentication
-Swagger	API documentation
-DevOps
-Technology	Purpose
-Docker	Containerization
-GitHub Actions	CI/CD pipeline
-Azure/AWS	Cloud hosting
-📦 Installation Guide
-Prerequisites
-Node.js v16+
-
-.NET 7 SDK
-
-MongoDB (local or Atlas)
-
-Angular CLI (npm install -g @angular/cli)
-
-Step-by-Step Setup
-Clone the repository
-
-bash
-git clone https://github.com/AmanSDE/FocusLearn.git
-cd FocusLearn
-Backend Setup
-
-bash
-cd server-api
-# Create .env file (see example below)
-dotnet restore
-dotnet run
-Frontend Setup
-
-bash
-cd ../client-app
-npm install
-ng serve
-Access the Application
-Open http://localhost:4200 in your browser
-
-Environment Configuration
-Create .env in server-api folder:
-
-ini
-# MongoDB Configuration
-MONGODB_URI=mongodb://localhost:27017/focuslearn
-
-# JWT Settings
-JWT_SECRET=your_secure_secret_here
-JWT_EXPIRE_DAYS=7
-
-# CORS Settings
-ALLOWED_ORIGINS=http://localhost:4200
-🔧 Development Setup
-Running with Docker
-bash
-docker-compose up --build
-Common Commands
-Command	Action
-ng serve	Start Angular dev server
-dotnet watch run	Hot-reload .NET backend
-npm run build	Production frontend build
-Generating Components
-bash
-# Angular component
-ng generate component components/new-feature
-
-# .NET controller
-dotnet aspnet-codegenerator controller -name NewController -async -api
-🏗️ Project Structure
+\section*{\color{primary}\faIcon{code} Development}
+\subsection*{Project Structure}
+\begin{minted}{text}
 FocusLearn/
-├── client-app/          # Angular Frontend
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── auth/          # Login/Register flows
-│   │   │   ├── core/          # Services, interceptors
-│   │   │   ├── dashboard/     # Analytics views
-│   │   │   ├── library/       # Resource management
-│   │   │   ├── shared/        # Reusable components
-│   │   │   ├── viewer/        # PDF/Video player
-│   │   │   └── app.module.ts  # Main module
-│   │   └── assets/        # Images, fonts
-│   └── angular.json      # Build config
-│
-├── server-api/           # .NET Backend
-│   ├── Controllers/      # API endpoints
-│   ├── Models/           # Database models
-│   ├── Repositories/     # Data access layer
-│   ├── Services/         # Business logic
-│   ├── appsettings.json  # Configuration
-│   └── Program.cs        # Entry point
-│
-├── docker-compose.yml    # Container setup
-└── README.md             # This document
-📈 Roadmap
-Current Development
-JWT Authentication
+├── client-app/          # Angular frontend
+│   ├── src/app/
+│   │   ├── auth/       # Authentication flows
+│   │   ├── core/       # Services
+│   │   └── viewer/     # PDF/Video player
+├── server-api/         # .NET backend
+│   ├── Controllers/
+│   ├── Models/
+│   └── Repositories/
+\end{minted}
 
-PDF Viewer Integration
+\subsection*{Common Commands}
+\begin{tabularx}{\textwidth}{lX}
+    \toprule
+    Command & Purpose \\
+    \midrule
+    \texttt{ng generate component} & Create new Angular component \\
+    \texttt{dotnet watch run} & Hot-reload backend \\
+    \texttt{docker-compose up} & Run with containers \\
+    \bottomrule
+\end{tabularx}
 
-YouTube Player
+\section*{\color{primary}\faIcon{road} Roadmap}
+\begin{itemize}
+    \item \faIcon{robot} AI-powered note summarization (Q2 2024)
+    \item \faIcon{users} Collaborative annotation (Q3 2024)
+    \item \faIcon{mobile} Mobile app (Q4 2024)
+\end{itemize}
 
-Note Export Functionality
+\section*{\color{primary}\faIcon{hands-helping} Contributing}
+\begin{itemize}
+    \item Fork the repository
+    \item Create feature branches (\texttt{feat/your-feature})
+    \item Follow Angular/.NET style guides
+    \item Submit pull requests with tests
+\end{itemize}
 
-Next Features
-Diagram
-Code
-🤝 Contributing
-We welcome contributions! Please follow our guidelines:
+\section*{\color{primary}\faIcon{balance-scale} License}
+MIT License - See \href{LICENSE}{LICENSE} file.
 
-Fork the repository
+\section*{\color{primary}\faIcon{envelope} Contact}
+\begin{itemize}
+    \item \faIcon{github} \href{https://github.com/AmanSDE}{github.com/AmanSDE}
+    \item \faIcon{twitter} \href{https://twitter.com/yourhandle}{@yourhandle}
+    \item \faIcon{envelope} \texttt{am.amanshahi@example.com}
+\end{itemize}
 
-Branch per feature (feat/your-feature or fix/your-fix)
+\begin{center}
+    \colorbox{primary!10}{
+        \parbox{0.8\textwidth}{
+            \centering
+            \color{primary}\textbf{\faIcon{star} Star us on GitHub if you find this project useful!}\\
+            Support open-source development
+        }
+    }
+\end{center}
 
-Commit with descriptive messages
-
-Test your changes thoroughly
-
-Push to your branch
-
-Open a Pull Request
-
-Code Standards
-Follow Angular style guide
-
-Use repository pattern in backend
-
-Document new methods with JSDoc/XML comments
-
-Maintain 80%+ test coverage
-
-📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-📬 Contact
-Aman Shahi
-Twitter
-LinkedIn
-
-📧 Email: am.amanshahi@example.com
-🌐 Website: https://yourportfolio.com
-
-Project Link: https://github.com/AmanSDE/FocusLearn
-
-<div align="center"> <h3>🌟 Star us on GitHub if you find this project useful! 🌟</h3> <p>Support open-source development</p> </div> ```
-Key Features of This README:
-Visual Hierarchy - Clear sections with emoji headers
-
-Responsive Images - Placeholders marked for actual screenshots
-
-Interactive Elements - Badges, tables, and code blocks
-
-Comprehensive Guides - From installation to contribution
-
-Future Roadmap - With mermaid.js Gantt chart
-
-Professional Contact - With social media badges
-
-Call-to-Action - Encouraging GitHub stars
-
-How to Use:
-Copy this entire markdown
-
-Paste into your README.md file
-
-Replace placeholder images with actual screenshots
-
-Update contact information
-
-Customize roadmap as needed
-
-Would you like me to generate any additional files like:
-
-CONTRIBUTING.md with more detailed guidelines
-
-API_DOCS.md with endpoint documentation
-
-Docker-specific setup instructions?
+\end{document}
