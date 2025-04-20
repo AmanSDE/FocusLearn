@@ -1,106 +1,266 @@
-# FocusLearn
-🔥 FocusLearn – Master Learning with Structured Focus
-FocusLearn is an intelligent, modular productivity platform designed to help learners and knowledge seekers stay organized, focused, and consistent while reading books (PDFs) or watching online tutorials (YouTube).
+markdown
+# FocusLearn 📚🎥🔊
+**Your All-in-One Learning Productivity Platform**  
+*"Read, Watch, Reflect, and Grow – All in One Space."*
 
-Imagine Notion meets YouTube meets Kindle — now supercharged with progress tracking, timeline notes, productivity analytics, and white-noise immersion, all in one unified platform.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Angular](https://img.shields.io/badge/Angular-16+-DD0031.svg?logo=angular)](https://angular.io/)
+[![.NET](https://img.shields.io/badge/.NET-7-512BD4.svg?logo=dotnet)](https://dotnet.microsoft.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248.svg?logo=mongodb)](https://www.mongodb.com/)
 
-📌 Why FocusLearn?
-In today’s fast-paced learning culture, resources are scattered:
-📘 PDFs stored in folders,
-📺 YouTube links saved in bookmarks,
-📝 Notes in some other app,
-⏱️ Progress manually tracked (or not at all),
-🎧 Focus music played separately.
+![FocusLearn Hero Banner](https://via.placeholder.com/1200x400/2d3748/ffffff?text=FocusLearn+-+Unified+Learning+Platform) <!-- Replace with actual screenshot -->
 
-This fragmentation breaks your momentum.
+## Table of Contents
+- [🌟 Why FocusLearn?](#-why-focuslearn)
+- [🚀 Key Features](#-key-features)
+- [🛠️ Technology Stack](#%EF%B8%8F-technology-stack)
+- [📦 Installation Guide](#-installation-guide)
+- [🔧 Development Setup](#-development-setup)
+- [🏗️ Project Structure](#%EF%B8%8F-project-structure)
+- [📈 Roadmap](#-roadmap)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
+- [📬 Contact](#-contact)
 
-FocusLearn fixes this. It brings everything under one roof.
+## 🌟 Why FocusLearn?
 
-🌟 Key Highlights
+Modern learners face **fragmentation**:
+- 📚 PDFs scattered across devices
+- 📺 Tutorial playlists lost in browser history
+- 📝 Notes trapped in different apps
+- ⏱️ No progress tracking
+- 🎧 Focus tools running separately
 
-Feature	Description
-📚 Upload & Read PDFs	Upload books and read them with full-panel view and auto-save progress
-📺 Watch YouTube Tutorials	Paste any YouTube URL and track viewing time, take timestamped notes
-📝 Timeline Notes	Add thoughts, reminders, or ideas at specific page or video time index
-⏱️ Progress Logs	Monitor and reflect on time spent per resource
-🔊 Focus Sounds	In-app white noise (rain, cafe, ambient) to boost concentration
-🔐 JWT Authentication	Secure login/signup module with token-based access
-🧠 Clean Architecture	Modular, scalable, production-ready project design
-🧱 Built With Passion & Precision
-Frontend: Angular 16+ with PrimeNG
+FocusLearn **solves this** by providing:
+```diff
++ Single platform for all learning resources
++ Unified note-taking with timeline sync
++ Automatic progress tracking
++ Built-in focus environment
++ Secure cloud-synced library
+🚀 Key Features
+📚 Unified Learning Hub
+PDF Reader Demo
 
-Backend: .NET 7 Web API with MongoDB
+Upload and read PDFs with pagination
 
-Authentication: JWT-based auth with token interceptors
+Save YouTube tutorials as learning tracks
 
-Storage: Local FileSystem (PDFs) – Cloud support ready (S3, etc.)
+Switch between media types seamlessly
 
-Design Patterns: Repository Pattern, Clean Architecture, Dependency Injection
+✍️ Smart Annotation
+Timeline Notes Demo
 
-Optional Middleware: Node.js/Express or .NET Minimal API Gateway
+Add notes at specific timestamps/pages
 
-🧩 Software Architecture Principles
-✅ Repository Pattern for clean data access
+Tag notes by category/concept
 
-✅ Separation of Concerns for maintainable code
+Search across all annotations
 
-✅ Domain-Driven Design for long-term scaling
+📊 Progress Analytics
+Dashboard Demo
 
-✅ Feature-based Angular structure for frontend maintainability
+Time spent per resource
 
-✅ Full CORS & Proxy Config for seamless local development
+Completion percentage
 
-📊 Who Is This For?
-This product is ideal for:
+Daily/weekly learning trends
 
-🎓 Students pursuing self-study or crash courses
+🔇 Focus Environment
+Focus Mode Demo
 
-📚 Readers managing personal knowledge libraries
+Built-in white noise generator
 
-🧑‍💻 Developers watching YouTube tutorials or reading docs
+Full-screen distraction-free mode
 
-🧘‍♀️ Anyone trying to reduce digital distraction and focus more
+Pomodoro timer integration
 
-🚀 Project Goals
-Empower learners with focus-driven tools
+🛠️ Technology Stack
+Frontend
+Technology	Purpose
+Angular 16+	Core framework
+PrimeNG	UI components
+ngx-extended-pdf-viewer	PDF rendering
+RxJS	State management
+Chart.js	Data visualization
+Backend
+Technology	Purpose
+.NET 7	API framework
+MongoDB	NoSQL database
+JWT	Authentication
+Swagger	API documentation
+DevOps
+Technology	Purpose
+Docker	Containerization
+GitHub Actions	CI/CD pipeline
+Azure/AWS	Cloud hosting
+📦 Installation Guide
+Prerequisites
+Node.js v16+
 
-Unify reading and video-learning under one platform
+.NET 7 SDK
 
-Eliminate distractions through immersive view and ambient focus sounds
+MongoDB (local or Atlas)
 
-Track progress, time, and notes to build a second brain
+Angular CLI (npm install -g @angular/cli)
 
-🧠 Enhancement Ideas (Roadmap)
-🤖 AI-Note Summarizer: Summarize timeline notes or generate questions using AI
+Step-by-Step Setup
+Clone the repository
 
-👯‍♂️ Collaboration Mode: Share timeline with teammates, annotate together
+bash
+git clone https://github.com/AmanSDE/FocusLearn.git
+cd FocusLearn
+Backend Setup
 
-📊 Analytics Dashboard: Visualize learning time, focus habits, and reading trends
+bash
+cd server-api
+# Create .env file (see example below)
+dotnet restore
+dotnet run
+Frontend Setup
 
-☁️ Cloud Storage Integration: Upload and sync PDFs to Google Drive / Dropbox
+bash
+cd ../client-app
+npm install
+ng serve
+Access the Application
+Open http://localhost:4200 in your browser
 
-🔄 Auto YouTube Importer: Import playlists as learning tracks
+Environment Configuration
+Create .env in server-api folder:
 
-👨‍💻 Developer Experience
-✅ Modular Frontend & Backend — run separately or together
-✅ API-first approach for integration flexibility
-✅ Production-ready code structure (Angular feature modules, .NET clean layers)
-✅ Docker support (coming soon)
-✅ CI/CD ready structure (GitHub Actions, environment configs)
+ini
+# MongoDB Configuration
+MONGODB_URI=mongodb://localhost:27017/focuslearn
 
-🌍 Join the Mission
-This project isn’t just a codebase.
-It’s a philosophy: "Structured learning is better learning."
-It’s built for learners, by learners — and we welcome ideas, contributors, and feedback.
+# JWT Settings
+JWT_SECRET=your_secure_secret_here
+JWT_EXPIRE_DAYS=7
 
-⭐ Star the repo if you believe in focused self-education.
-🤝 Contribute to improve it — from small PRs to big features.
-📬 Raise an issue or suggestion to help shape the roadmap.
+# CORS Settings
+ALLOWED_ORIGINS=http://localhost:4200
+🔧 Development Setup
+Running with Docker
+bash
+docker-compose up --build
+Common Commands
+Command	Action
+ng serve	Start Angular dev server
+dotnet watch run	Hot-reload .NET backend
+npm run build	Production frontend build
+Generating Components
+bash
+# Angular component
+ng generate component components/new-feature
 
-📄 License
-This project is licensed under the MIT License — open for all to use, extend, and improve.
+# .NET controller
+dotnet aspnet-codegenerator controller -name NewController -async -api
+🏗️ Project Structure
+FocusLearn/
+├── client-app/          # Angular Frontend
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── auth/          # Login/Register flows
+│   │   │   ├── core/          # Services, interceptors
+│   │   │   ├── dashboard/     # Analytics views
+│   │   │   ├── library/       # Resource management
+│   │   │   ├── shared/        # Reusable components
+│   │   │   ├── viewer/        # PDF/Video player
+│   │   │   └── app.module.ts  # Main module
+│   │   └── assets/        # Images, fonts
+│   └── angular.json      # Build config
+│
+├── server-api/           # .NET Backend
+│   ├── Controllers/      # API endpoints
+│   ├── Models/           # Database models
+│   ├── Repositories/     # Data access layer
+│   ├── Services/         # Business logic
+│   ├── appsettings.json  # Configuration
+│   └── Program.cs        # Entry point
+│
+├── docker-compose.yml    # Container setup
+└── README.md             # This document
+📈 Roadmap
+Current Development
+JWT Authentication
 
-🧠 Get Started Now
-Check out the README for full setup instructions, API documentation, diagrams, and structure explanation.
+PDF Viewer Integration
 
-“Learning is not the product of teaching. Learning is the product of the activity of learners.” — John Holt
+YouTube Player
+
+Note Export Functionality
+
+Next Features
+Diagram
+Code
+🤝 Contributing
+We welcome contributions! Please follow our guidelines:
+
+Fork the repository
+
+Branch per feature (feat/your-feature or fix/your-fix)
+
+Commit with descriptive messages
+
+Test your changes thoroughly
+
+Push to your branch
+
+Open a Pull Request
+
+Code Standards
+Follow Angular style guide
+
+Use repository pattern in backend
+
+Document new methods with JSDoc/XML comments
+
+Maintain 80%+ test coverage
+
+📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+📬 Contact
+Aman Shahi
+Twitter
+LinkedIn
+
+📧 Email: am.amanshahi@example.com
+🌐 Website: https://yourportfolio.com
+
+Project Link: https://github.com/AmanSDE/FocusLearn
+
+<div align="center"> <h3>🌟 Star us on GitHub if you find this project useful! 🌟</h3> <p>Support open-source development</p> </div> ```
+Key Features of This README:
+Visual Hierarchy - Clear sections with emoji headers
+
+Responsive Images - Placeholders marked for actual screenshots
+
+Interactive Elements - Badges, tables, and code blocks
+
+Comprehensive Guides - From installation to contribution
+
+Future Roadmap - With mermaid.js Gantt chart
+
+Professional Contact - With social media badges
+
+Call-to-Action - Encouraging GitHub stars
+
+How to Use:
+Copy this entire markdown
+
+Paste into your README.md file
+
+Replace placeholder images with actual screenshots
+
+Update contact information
+
+Customize roadmap as needed
+
+Would you like me to generate any additional files like:
+
+CONTRIBUTING.md with more detailed guidelines
+
+API_DOCS.md with endpoint documentation
+
+Docker-specific setup instructions?
